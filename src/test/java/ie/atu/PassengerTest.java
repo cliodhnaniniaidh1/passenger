@@ -35,6 +35,17 @@ class PassengerTest {
         assertEquals("Error, Invalid Title! Options: Mr, Mrs, Ms", exMessage.getMessage());
     }
 
+    @Test
+    void successName(){
+        assertEquals("Cliodhna", myPassenger.name("Cliodhna"));
+    }
+
+    @Test
+    void failureName(){
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {myPassenger.name("Al");});
+        assertEquals("This is not a valid name", exMessage.getMessage());
+    }
+
     @AfterEach
     void tearDown() {
     }
