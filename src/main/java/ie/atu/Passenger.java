@@ -4,7 +4,7 @@ public class Passenger {
     String title;
 
     public void setTitle(String t) {
-        if(t=="Mr" && t=="Mrs" && t=="Ms") {
+        if(t=="Mr" || t=="Mrs" || t=="Ms") {
             this.title = t;
         }
         else {
