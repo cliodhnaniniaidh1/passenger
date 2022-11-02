@@ -46,12 +46,17 @@ public class Passenger {
         return id;
     }
 
-    public String phone(String p){
-        this.phone = p;
-        if(p.length()<7){
+    public void setPhone(String p){
+        if(p.length()>7){
+            this.phone = p;
+        }
+        else{
             throw new IllegalArgumentException("This is not a valid phone number");
         }
-        return p;
+    }
+
+    public String getPhone(){
+        return phone;
     }
 
     public int age(int a){
