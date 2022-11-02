@@ -20,12 +20,17 @@ public class Passenger {
         return title;
     }
 
-    public String name(String n) {
-        this.name = n;
-        if(n.length()<3){
+    public void setName(String n) {
+        if(n.length()>3){
+            this.name = n;
+        }
+        else{
             throw new IllegalArgumentException("This is not a valid name");
         }
-        return n;
+    }
+
+    public String getName(){
+        return name;
     }
 
     public String id(String i){
