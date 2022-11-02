@@ -40,12 +40,13 @@ class PassengerTest {
 
     @Test
     void successName(){
-        assertEquals("Cliodhna", myPassenger.name("Cliodhna"));
+        myPassenger.setName("Cliodhna");
+        assertEquals("Cliodhna", myPassenger.getName());
     }
 
     @Test
     void failureName(){
-        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {myPassenger.name("Al");});
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {myPassenger.setName("Al");});
         assertEquals("This is not a valid name", exMessage.getMessage());
     }
 
