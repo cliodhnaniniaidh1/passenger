@@ -33,12 +33,17 @@ public class Passenger {
         return name;
     }
 
-    public String id(String i){
-        this.id=i;
-        if(i.length()<10){
+    public void setID(String i){
+        if(i.length()>10){
+            this.id=i;
+        }
+        else{
             throw new IllegalArgumentException("This is not a valid ID");
         }
-        return i;
+    }
+
+    public String getID(){
+        return id;
     }
 
     public String phone(String p){

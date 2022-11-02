@@ -52,12 +52,13 @@ class PassengerTest {
 
     @Test
     void successID(){
-        assertEquals("G0038539611", myPassenger.id("G0038539611"));
+        myPassenger.setID("G0038539611");
+        assertEquals("G0038539611", myPassenger.getID());
     }
 
     @Test
     void failureID(){
-        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {myPassenger.id("G0038539");});
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {myPassenger.setID("G0038539");});
         assertEquals("This is not a valid ID", exMessage.getMessage());
     }
 
