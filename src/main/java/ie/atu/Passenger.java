@@ -59,11 +59,16 @@ public class Passenger {
         return phone;
     }
 
-    public int age(int a){
-        this.age = a;
-        if(a<16){
+    public void setAge(int a){
+        if(a>16) {
+            this.age = a;
+        }
+        else{
             throw new IllegalArgumentException("This is not a valid age");
         }
-        return a;
+    }
+
+    public int getAge(){
+        return age;
     }
 }
