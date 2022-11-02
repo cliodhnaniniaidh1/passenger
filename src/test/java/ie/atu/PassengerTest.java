@@ -20,6 +20,7 @@ class PassengerTest {
         assertEquals("Mr", myPassenger.getTitle());
     }
 
+
     @Test
     void successTitleMrs(){
         myPassenger.setTitle("Mrs");
