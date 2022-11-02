@@ -16,22 +16,25 @@ class PassengerTest {
 
     @Test
     void successTitleMr(){
-        assertEquals("Mr", myPassenger.title("Mr"));
+        myPassenger.setTitle("Mr");
+        assertEquals("Mr", myPassenger.getTitle());
     }
 
     @Test
     void successTitleMrs(){
-        assertEquals("Mrs", myPassenger.title("Mrs"));
+        myPassenger.setTitle("Mrs");
+        assertEquals("Mrs", myPassenger.getTitle());
     }
 
     @Test
     void successTitleMs(){
-        assertEquals("Ms", myPassenger.title("Ms"));
+        myPassenger.setTitle("Ms");
+        assertEquals("Ms", myPassenger.getTitle());
     }
 
     @Test
     void failureTitle(){
-        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> { myPassenger.title("Miss");});
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> { myPassenger.setTitle("Miss");});
         assertEquals("Error, Invalid Title! Options: Mr, Mrs, Ms", exMessage.getMessage());
     }
 

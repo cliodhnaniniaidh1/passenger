@@ -2,14 +2,50 @@
 
 <span class="fc" id="L3">public class Passenger {</span>
     String title;
+    String name;
+    String id;
+    String phone;
+    int age;
 
     public String title(String t) {
-<span class="fc" id="L7">        this.title = t;</span>
+<span class="fc" id="L11">        this.title = t;</span>
 
-<span class="fc bfc" id="L9" title="All 6 branches covered.">        if(t!=&quot;Mr&quot; &amp;&amp; t!=&quot;Mrs&quot; &amp;&amp; t!=&quot;Ms&quot;){</span>
-<span class="fc" id="L10">            throw new IllegalArgumentException(&quot;Error, Invalid Title! Options: Mr, Mrs, Ms&quot;);</span>
+<span class="fc bfc" id="L13" title="All 6 branches covered.">        if(t!=&quot;Mr&quot; &amp;&amp; t!=&quot;Mrs&quot; &amp;&amp; t!=&quot;Ms&quot;){</span>
+<span class="fc" id="L14">            throw new IllegalArgumentException(&quot;Error, Invalid Title! Options: Mr, Mrs, Ms&quot;);</span>
         }
-<span class="fc" id="L12">        return t;</span>
+<span class="fc" id="L16">        return t;</span>
+    }
+
+    public String name(String n) {
+<span class="fc" id="L20">        this.name = n;</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        if(n.length()&lt;3){</span>
+<span class="fc" id="L22">            throw new IllegalArgumentException(&quot;This is not a valid name&quot;);</span>
+        }
+<span class="fc" id="L24">        return n;</span>
+    }
+
+    public String id(String i){
+<span class="fc" id="L28">        this.id=i;</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if(i.length()&lt;10){</span>
+<span class="fc" id="L30">            throw new IllegalArgumentException(&quot;This is not a valid ID&quot;);</span>
+        }
+<span class="fc" id="L32">        return i;</span>
+    }
+
+    public String phone(String p){
+<span class="fc" id="L36">        this.phone = p;</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        if(p.length()&lt;7){</span>
+<span class="fc" id="L38">            throw new IllegalArgumentException(&quot;This is not a valid phone number&quot;);</span>
+        }
+<span class="fc" id="L40">        return p;</span>
+    }
+
+    public int age(int a){
+<span class="fc" id="L44">        this.age = a;</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        if(a&lt;16){</span>
+<span class="fc" id="L46">            throw new IllegalArgumentException(&quot;This is not a valid age&quot;);</span>
+        }
+<span class="fc" id="L48">        return a;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
