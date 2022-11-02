@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: ie.atu.PassengerTest
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.179 s <<< FAILURE! - in ie.atu.PassengerTest
-ie.atu.PassengerTest.successTitleMr  Time elapsed: 0.004 s  <<< ERROR!
+Tests run: 12, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.185 s <<< FAILURE! - in ie.atu.PassengerTest
+ie.atu.PassengerTest.successTitleMr  Time elapsed: 0.005 s  <<< ERROR!
 java.lang.IllegalArgumentException: Error, Invalid Title! Options: Mr, Mrs, Ms
 	at ie.atu.Passenger.setTitle(Passenger.java:15)
 	at ie.atu.PassengerTest.successTitleMr(PassengerTest.java:19)
@@ -78,7 +78,7 @@ java.lang.IllegalArgumentException: Error, Invalid Title! Options: Mr, Mrs, Ms
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 
-ie.atu.PassengerTest.successTitleMs  Time elapsed: 0.003 s  <<< ERROR!
+ie.atu.PassengerTest.successTitleMs  Time elapsed: 0.002 s  <<< ERROR!
 java.lang.IllegalArgumentException: Error, Invalid Title! Options: Mr, Mrs, Ms
 	at ie.atu.Passenger.setTitle(Passenger.java:15)
 	at ie.atu.PassengerTest.successTitleMs(PassengerTest.java:31)
