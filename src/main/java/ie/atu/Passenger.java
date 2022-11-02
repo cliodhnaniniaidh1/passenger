@@ -5,6 +5,7 @@ public class Passenger {
     String name;
     String id;
     String phone;
+    int age;
 
     public String title(String t) {
         this.title = t;
@@ -37,5 +38,13 @@ public class Passenger {
             throw new IllegalArgumentException("This is not a valid phone number");
         }
         return p;
+    }
+
+    public int age(int a){
+        this.age = a;
+        if(a<16){
+            throw new IllegalArgumentException("This is not a valid age");
+        }
+        return a;
     }
 }
