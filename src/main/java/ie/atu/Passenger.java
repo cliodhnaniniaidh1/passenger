@@ -7,13 +7,17 @@ public class Passenger {
     String phone;
     int age;
 
-    public String title(String t) {
-        this.title = t;
-
-        if(t!="Mr" && t!="Mrs" && t!="Ms"){
-            throw new IllegalArgumentException("Error, Invalid Title! Options: Mr, Mrs, Ms");
+    public void setTitle(String t) {
+        if(t=="Mr" && t=="Mrs" && t=="Ms") {
+            this.title = t;
         }
-        return t;
+        else {
+            throw new IllegalArgumentException("Error, Invalid Title! Options: Mr, Mrs, Ms");
+            }
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public String name(String n) {
