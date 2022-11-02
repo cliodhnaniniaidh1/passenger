@@ -76,12 +76,13 @@ class PassengerTest {
 
     @Test
     void successAge(){
-        assertEquals(21, myPassenger.age(21));
+        myPassenger.setAge(21);
+        assertEquals(21, myPassenger.getAge());
     }
 
     @Test
     void failureAge(){
-        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {myPassenger.age(12);});
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {myPassenger.setAge(12);});
         assertEquals("This is not a valid age", exMessage.getMessage());
     }
 
