@@ -17,11 +17,23 @@ public class Passenger {
         else {
             throw new IllegalArgumentException("Error, Invalid Title! Options: Mr, Mrs, Ms");
         }
+
+        //checking if name is greater than 3 characters
+        if(name.length()>3){
+            this.name = name;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid name");
+        }
     }
 
     //returns title from Passenger
     public String getTitle() {
         return title;
+    }
+
+    public String getName(){
+        return name;
     }
 
 }
