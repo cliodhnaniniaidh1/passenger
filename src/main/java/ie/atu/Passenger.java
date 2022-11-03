@@ -34,6 +34,14 @@ public class Passenger {
             throw new IllegalArgumentException("This is not a valid ID");
         }
 
+        //checking if phone is greater than 7 characters
+        if(phone.length()>7){
+            this.phone = phone;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid phone number");
+        }
+
     }
 
     //returns title from Passenger
@@ -48,5 +56,8 @@ public class Passenger {
     public String getID(){
         return id;
     }
-
+    //returns phone from passenger
+    public String getPhone() {
+        return phone;
+    }
 }

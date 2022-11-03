@@ -63,6 +63,20 @@ class PassengerTest {
         assertEquals("This is not a valid ID", exMessage.getMessage());
     }
 
+    //testing success and failure for phone
+    @Test
+    void successPhone(){
+        Passenger myPassenger = new Passenger("Ms","Cliodhna","G0038639511","0873883598", 21 );
+        assertEquals("0873883598", myPassenger.getPhone());
+    }
+
+    @Test
+    void failurePhone(){
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> { new Passenger("Ms","Cliodhna","G0038639511","0873", 21);});
+        assertEquals("This is not a valid phone number", exMessage.getMessage());
+    }
+
+
 
     @AfterEach
     void tearDown() {
