@@ -42,6 +42,14 @@ public class Passenger {
             throw new IllegalArgumentException("This is not a valid phone number");
         }
 
+        //checking if age is over 16
+        if(age>16) {
+            this.age = age;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid age");
+        }
+
     }
 
     //returns title from Passenger
@@ -59,5 +67,9 @@ public class Passenger {
     //returns phone from passenger
     public String getPhone() {
         return phone;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
