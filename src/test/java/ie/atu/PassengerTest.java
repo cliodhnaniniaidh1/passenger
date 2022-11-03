@@ -76,7 +76,18 @@ class PassengerTest {
         assertEquals("This is not a valid phone number", exMessage.getMessage());
     }
 
+    //testing success and failure of age
+    @Test
+    void successAge(){
+        Passenger myPassenger = new Passenger("Ms","Cliodhna","G0038639511","0873883598", 21 );
+        assertEquals(21, myPassenger.getAge());
+    }
 
+    @Test
+    void failureAge(){
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> { new Passenger("Ms","Cliodhna","G0038639511","0873883598", 12);});
+        assertEquals("This is not a valid age", exMessage.getMessage());
+    }
 
     @AfterEach
     void tearDown() {
