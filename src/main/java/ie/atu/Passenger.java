@@ -25,15 +25,28 @@ public class Passenger {
         else{
             throw new IllegalArgumentException("This is not a valid name");
         }
+
+        //checking if ID has more than 10 characters
+        if(id.length()>10){
+            this.id=id;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid ID");
+        }
+
     }
 
     //returns title from Passenger
     public String getTitle() {
         return title;
     }
-
+    //returns name from passenger
     public String getName(){
         return name;
+    }
+    //returns ID from passenger
+    public String getID(){
+        return id;
     }
 
 }
